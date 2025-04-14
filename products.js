@@ -1,6 +1,24 @@
 
 
 
+function searchProducts() {
+    const query = document.getElementById('productSearch').value.toLowerCase();
+    const allProducts = document.querySelectorAll('.col-md-4');
+
+    allProducts.forEach(product => {
+        const name = product.querySelector('.product-name')?.textContent.toLowerCase();
+        const brand = product.querySelector('.brand-name')?.textContent.toLowerCase();
+        const type = product.querySelector('.product-type')?.textContent.toLowerCase();
+
+        if (name.includes(query) || brand.includes(query) || type.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+
 
 
 function filterProducts(category) {
