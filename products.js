@@ -22,7 +22,7 @@ function searchProducts() {
 
 
 function filterProducts(category) {
-    let products = document.querySelectorAll(".col-md-4.mb-4"); // Select all products
+    let products = document.querySelectorAll(".col-md-4.mb-4"); 
 
     products.forEach(product => {
         if (category === "all") {
@@ -69,11 +69,9 @@ function addToBasket(productId) {
     // Save updated basket to localStorage
     localStorage.setItem('basket', JSON.stringify(basket));
 
-    // Optionally, show a confirmation message or update UI
     alert(`${productName} added to basket!`);
 
 
-// Function to initialize the page
 function initialize() {
     // Set up filter buttons
     document.querySelectorAll('.btn-outline-primary').forEach(button => {
@@ -90,7 +88,6 @@ function initialize() {
     });
 }
 
-// Initialize the page on load
 window.onload = initialize;
 
 
