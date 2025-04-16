@@ -340,6 +340,8 @@ img{
 .feedbacks textarea{
     border-radius: 20px;
     padding: 0px 15px;
+    max-width: 40%;
+
 }
 #submit-review {
     border-radius: 15px;
